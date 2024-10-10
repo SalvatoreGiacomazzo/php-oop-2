@@ -2,3 +2,16 @@ img {
     max-height: 100%;
     display: block;
 }
+
+header {
+    height: 100px;
+    background-color: goldenrod;
+}
+
+body {
+    background-color: dodgerblue;
+}
+
+.card {
+    margin-bottom: 30px;
+}
