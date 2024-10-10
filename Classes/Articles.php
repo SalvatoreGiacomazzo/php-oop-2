@@ -8,7 +8,7 @@ class Articles
     public Category $category;
     public string $shop;
 
-    public function __construct($articleName, $articleImg, $articlePrice, $category, $shop)
+    public function __construct($articleName, $articleImg, $articlePrice, Category $category, $shop)
     {
         $this->articleName = $articleName;
         $this->articlePrice = $articlePrice;
