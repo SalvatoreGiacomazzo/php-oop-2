@@ -6,14 +6,18 @@ class Articles
     public string $articleImg;
     public float $articlePrice;
     public Category $category;
-    public string $shop;
 
-    public function __construct($articleName, $articleImg, $articlePrice, Category $category, $shop)
+    //Array che conterrà tutti i prodotti
+    public static array $allArticles = [];
+
+
+    public function __construct($articleName, $articleImg, $articlePrice, Category $category)
     {
         $this->articleName = $articleName;
         $this->articlePrice = $articlePrice;
         $this->articleImg = $articleImg;
         $this->category = $category;
-        $this->shop = $shop;
+
+        self::$allArticles[] = $this;
     }
 }
