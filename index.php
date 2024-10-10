@@ -19,15 +19,15 @@ $bedArticles = [
 ];
 //articoli food
 $foodArticles = [
-    new Food('Creazioni speciali umido', 'https://www.libero.it/shopping/wp-content/uploads/2021/07/cibo-umido-per-gatti_sheba.jpg,', 3.99, $catEgory, 'Coniglio, anatra e verdure'),
+    new Food('Creazioni speciali umido', 'https://www.libero.it/shopping/wp-content/uploads/2021/07/cibo-umido-per-gatti_sheba.jpg', 3.99, $catEgory, 'Coniglio, anatra e verdure'),
     new Food('Friskies croccantini', 'https://m.media-amazon.com/images/I/41aoRbFoZSL.jpg', 29.99, $dogCategory, '100% Carne Italiana'),
-    new Food('Erba Gatta Geande Orto', 'https://media.adeo.com/marketplace/LMIT/81252296/197713.jpeg', 14.99, $catEgory, 'High Quality Catnip'),
+    new Food('Erba Gatta Grande Orto', 'https://media.adeo.com/marketplace/LMIT/81252296/197713.jpeg', 14.99, $catEgory, 'High Quality Catnip'),
 ];
 //articoli toy
 $toyArticles = [
-    new Toys('Kong Extreme', 'https://cdn.geapetshop.it/uploads/2020/12/4956.jpg', 6.80, $dogCategory, 'Indistruttibile.'),
+    new Toys('Kong Extreme', 'https://cdn.geapetshop.it/uploads/2020/12/4956.jpg', 6.89, $dogCategory, 'Indistruttibile.'),
     new Toys('Tiragraffi labirintico', 'https://www.tigri-domestiche-shop.it/3240-thickbox_default/tiragraffi-per-gatti-ex-8.jpg', 249.99, $catEgory, 'Preferirà una scatola.'),
-    new Toys('Gioco in corda', 'https://contents.mediadecathlon.com/p2355658/k$60b684ce01bc8888d1b8c1e59c417c43/sq/giocattolo-cane-corda-stella-33-cm.jpg?format=auto&f=800x0', 12.80, $dogCategory, 'Strattonare? No Problem.'),
+    new Toys('Gioco in corda', 'https://contents.mediadecathlon.com/p2355658/k$60b684ce01bc8888d1b8c1e59c417c43/sq/giocattolo-cane-corda-stella-33-cm.jpg?format=auto&f=800x0', 12.89, $dogCategory, 'Strattonare? No Problem.'),
 ];
 
 
@@ -35,7 +35,9 @@ $toyArticles = [
 $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
 
 
-//var_dump($allArticles);
+//var_dump($allArticles); 
+
+
 ?>
 
 
@@ -61,100 +63,31 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
     </header>
     <div class="container p-5">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+            <?php foreach ($allArticles as $article) { ?>
+                <div class="col-md-4">
+                    <div class="card" style="width: 100%;">
+                        <img src="<?= $article->articleImg ?>" class="card-img-top" alt="Card image 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"> <strong> <?= $article->articleName ?></strong></h5>
+                            <div class="card-text"><?= $article->articlePrice ?>&#x20AC;</div>
+                            <p>
+                            <h5 class="text-danger"><?= $article->category->categoryName ?> <?= $article->category->categorySymbol ?> </h5>
+                            <!--instanceof: operatore che ritorna un booleano, true se l'oggetto fa parte della classe o sottoclasse specificata, false se no -->
+                            <?php if ($article instanceof Food): ?>
+                                <p> <?= $article->foodQuality ?></p>
+                            <?php elseif ($article instanceof Beds): ?>
+                                <p> <?= $article->bedSize ?></p>
+                            <?php elseif ($article instanceof Toys): ?>
+                                <p> <?= $article->toyDesc ?></p>
+                            <?php endif; ?>
+
+                            <button class="btn btn-outline-success">Aggiungi al carrello <i class="fa-solid fa-cart-shopping"></i></button>
+                            </p>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src=".." class="card-img-top" alt="Card image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 3</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 4</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 5</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 6</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 7">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 7</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 8</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <img src="..." class="card-img-top" alt="Card image 9">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 9</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 
