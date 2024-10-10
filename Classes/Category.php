@@ -13,6 +13,6 @@ class Category
     }
 }
 
-
+//categories
 $dogCategory = new Category('Ideale per il tuo cane!', '<i class="fa-solid fa-dog"></i>');
 $catEgory = new Category('Perfetto per il tuo gatto!', '<i class="fa-solid fa-cat"></i>');
