@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+require '/Classes/Articles.php';
+require '/Classes/Category.php';
+
+?>
 
 
 
