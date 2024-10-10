@@ -59,12 +59,11 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
     <header>
         <h1 class="d-flex justify-content-center align-items-center text-primary"> OOP Pet Shop</h1>
     </header>
-    <div class="container">
-        <h1 class="my-4 text-center">hardcoded grid</h1>
+    <div class="container p-5">
         <div class="row">
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 1">
+                    <img src="..." class="card-img-top" alt="Card image 1">
                     <div class="card-body">
                         <h5 class="card-title">Card title 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -74,7 +73,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 2">
+                    <img src=".." class="card-img-top" alt="Card image 2">
                     <div class="card-body">
                         <h5 class="card-title">Card title 2</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -84,7 +83,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 3">
+                    <img src="..." class="card-img-top" alt="Card image 3">
                     <div class="card-body">
                         <h5 class="card-title">Card title 3</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -96,7 +95,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
         <div class="row">
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 4">
+                    <img src="..." class="card-img-top" alt="Card image 4">
                     <div class="card-body">
                         <h5 class="card-title">Card title 4</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -106,7 +105,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 5">
+                    <img src="..." class="card-img-top" alt="Card image 5">
                     <div class="card-body">
                         <h5 class="card-title">Card title 5</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -116,7 +115,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 6">
+                    <img src="..." class="card-img-top" alt="Card image 6">
                     <div class="card-body">
                         <h5 class="card-title">Card title 6</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -128,7 +127,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
         <div class="row">
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 7">
+                    <img src="..." class="card-img-top" alt="Card image 7">
                     <div class="card-body">
                         <h5 class="card-title">Card title 7</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -138,7 +137,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 8">
+                    <img src="..." class="card-img-top" alt="Card image 8">
                     <div class="card-body">
                         <h5 class="card-title">Card title 8</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -148,7 +147,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image 9">
+                    <img src="..." class="card-img-top" alt="Card image 9">
                     <div class="card-body">
                         <h5 class="card-title">Card title 9</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
