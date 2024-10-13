@@ -19,9 +19,9 @@ $bedArticles = [
 ];
 //articoli food
 $foodArticles = [
-    new Food('Creazioni speciali umido', 'https://www.libero.it/shopping/wp-content/uploads/2021/07/cibo-umido-per-gatti_sheba.jpg', 3.99, $catEgory, 'Coniglio, anatra e verdure'),
-    new Food('Friskies croccantini', 'https://m.media-amazon.com/images/I/41aoRbFoZSL.jpg', 29.99, $dogCategory, '100% Carne Italiana'),
-    new Food('Erba Gatta Grande Orto', 'https://media.adeo.com/marketplace/LMIT/81252296/197713.jpeg', 14.99, $catEgory, 'High Quality Catnip'),
+    $food1 = new Food('Creazioni speciali umido', 'https://www.libero.it/shopping/wp-content/uploads/2021/07/cibo-umido-per-gatti_sheba.jpg', 3.99, $catEgory, 'Coniglio, anatra e verdure'),
+    $food2 = new Food('Friskies croccantini', 'https://m.media-amazon.com/images/I/41aoRbFoZSL.jpg', 29.99, $dogCategory, '100% Carne Italiana'),
+    $food3 = new Food('Erba Gatta Grande Orto', 'https://media.adeo.com/marketplace/LMIT/81252296/197713.jpeg', 14.99, $catEgory, 'High Quality Catnip'),
 ];
 //articoli toy
 $toyArticles = [
@@ -36,6 +36,10 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
 
 
 //var_dump($allArticles); 
+
+$food1->setIsVegan(false);
+$food2->setIsVegan(false);
+$food3->setIsVegan(true);
 
 
 ?>
@@ -75,6 +79,7 @@ $allArticles = array_merge($bedArticles, $foodArticles, $toyArticles);
                             <!--instanceof: operatore che ritorna un booleano, true se l'oggetto fa parte della classe o sottoclasse specificata, false se no -->
                             <?php if ($article instanceof Food): ?>
                                 <p> <?= $article->foodQuality ?></p>
+                                <p class="text-success"> <?= $article->getIsVegan() ?> </p>
                             <?php elseif ($article instanceof Beds): ?>
                                 <p> <?= $article->bedSize ?></p>
                             <?php elseif ($article instanceof Toys): ?>
