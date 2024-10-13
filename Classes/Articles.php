@@ -1,4 +1,7 @@
 <?php
+include_once 'NegativePrice.php';
+
+
 class Articles
 {
 
@@ -18,6 +21,11 @@ class Articles
         $this->articlePrice = $articlePrice;
         $this->articleImg = $articleImg;
         $this->category = $category;
+
+
+        if ($articlePrice <= 0) {
+            throw new NegativePrice();
+        }
 
 
         self::$allArticles[] = $this;
